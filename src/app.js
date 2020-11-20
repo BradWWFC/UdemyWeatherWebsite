@@ -7,6 +7,9 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+//port is equal to PORT if it exists, else its equal to 3000
+const port = process.env.PORT || 3000
+
 //define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -98,6 +101,6 @@ app.get('*',(req, res) =>{
     })
 })
 
-app.listen(3000, () => {
-    console.log("Server is up on port 3000.")
+app.listen(port, () => {
+    console.log("Server is up on port "+ port)
 }) 
