@@ -12,7 +12,7 @@ const forecast = ({latitude, longitude}, callback) =>{
             callback("404", undefined)
         }
         else{
-            callback(undefined,body.current.weather_descriptions[0]+ " throughout the day. Temperature is currently " +body.current.temperature+" degrees" )
+            callback(undefined,body.current.weather_descriptions[0]+ " throughout the day. Temperature is currently " +body.current.temperature+" degrees with "+body.current.humidity+"% humidity." )
         }
     })
 }
